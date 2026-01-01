@@ -11,3 +11,13 @@ class Solution:
                 left += 1
             else:
                 right -= 1 
+
+
+obj = Solution()   # create an object of Solution
+
+numbers = [2, 7, 11, 15]
+target = 13
+
+obj = Solution()   
+result = obj.twoSum(numbers, target)   
+print(result)     
