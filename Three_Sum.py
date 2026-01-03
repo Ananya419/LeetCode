@@ -1,47 +1,33 @@
-from typing import List
-
 class Solution:
-    def threeSum(self, nums: List[int]) -> List[List[int]]:
-        # Step 1: Sort the array
+    def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()
-        result = []
-        
-        # Step 2: Iterate through the array
-        for i in range(len(nums)):
-            # Skip duplicate values for i
-            if i > 0 and nums[i] == nums[i - 1]:
+        n = len(nums)
+        answer = []
+
+        for i in range(n):
+            if nums[i] > 0:
+                break
+            elif i > 0 and nums[i] == nums[i-1]:
                 continue
-            
-            # Two pointers
-            left, right = i + 1, len(nums) - 1
-            
-            while left < right:
-                total = nums[i] + nums[left] + nums[right]
-                
-                if total < 0:
-                    left += 1
-                elif total > 0:
-                    right -= 1
+
+            lo,hi = i+1, n-1
+            while lo < hi:
+                sum = nums[i] + nums[lo] + nums[hi]
+                if sum == 0:
+                    answer.append([nums[i],nums[lo],nums[hi]])
+                    lo,hi = lo+1 , hi-1
+                    while lo < hi and nums[lo] == nums[lo-1]:
+                        lo += 1
+                    while lo < hi and nums[hi] == nums[hi+1]:
+                        hi -= 1
+                elif sum < 0:
+                    lo += 1
                 else:
-                    result.append([nums[i], nums[left], nums[right]])
-                    
-                    # Skip duplicates
-                    while left < right and nums[left] == nums[left + 1]:
-                        left += 1
-                    while left < right and nums[right] == nums[right - 1]:
-                        right -= 1
-                    
-                    left += 1
-                    right -= 1
+                    hi -= 1
+        return answer                   
+
         
-        return result
-
-
-# ✅ Create object of Solution class
-sol = Solution()
-
-# ✅ Call the method with an example input
+# Example usage:
+solution = Solution()
 nums = [-1, 0, 1, 2, -1, -4]
-output = sol.threeSum(nums)
-
-print("Triplets that sum to zero:", output)
+print(solution.threeSum(nums))
