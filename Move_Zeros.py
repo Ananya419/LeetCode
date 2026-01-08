@@ -22,9 +22,7 @@ class Solution:
 # Example usage:
 # it defines a list of numbers
 nums = [0, 1, 0, 3, 12]
-# move all zeros to the end
-nums = [0, 1, 0, 3, 12]
-# call the moveZeroes method
+# it calls the moveZeroes method to move zeros to the end
 Solution().moveZeroes(nums)
 # print the new list
 print(nums)
