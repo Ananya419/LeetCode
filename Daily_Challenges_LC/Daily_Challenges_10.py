@@ -3,7 +3,7 @@ from math import inf
 
 
 class Solution:
-    def maxSumTrionic(self, nums: List[int]) -> int:
+    def longestBalanced(self, nums: List[int]) -> int:
         n = len(nums)
         i = 0
         ans = -inf
@@ -61,12 +61,10 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
-    
-    # Test Case 1: From LeetCode example
     nums1 = [0, -2, -1, -3, 0, 2, -1]
     # Expected: -4 (indices 1,2,3,5: [-2,-1,-3,0,2])
     print(f"Test 1: {nums1}")
-    print(f"Result: {sol.maxSumTrionic(nums1)}")
+    print(f"Result: {sol.longestBalanced(nums1)}")
     print(f"Expected: -4")
     print()
     
