@@ -32,6 +32,6 @@ class Solution:
 # Example Usage:
 if __name__ == "__main__":
     solution = Solution()
-    print(solution.minFlips("111000"))  # Output: 1
+    print(solution.minFlips("111000"))  # Output: 2
     print(solution.minFlips("010"))     # Output: 0
     print(solution.minFlips("1110"))    # Output: 1

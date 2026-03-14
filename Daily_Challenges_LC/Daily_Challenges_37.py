@@ -26,3 +26,5 @@ class Solution:
 
 sol = Solution()
 print(sol.numberOfStableArrays(2, 2, 2))  # Output: 5
+
+

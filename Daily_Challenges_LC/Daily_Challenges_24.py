@@ -31,3 +31,4 @@ if __name__ == "__main__":
     root.right.right = TreeNode(1)
     solution = Solution()
     print(solution.sumRootToLeaf(root))  # Output: 22
+    
