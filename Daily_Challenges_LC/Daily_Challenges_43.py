@@ -29,5 +29,5 @@ if __name__ == "__main__":
     fancy.append(7)
     fancy.multAll(2)
     print(fancy.getIndex(0))  # Output: 10
-    print(fancy.getIndex(1))  # Output: 13
-    print(fancy.getIndex(2))  # Output: 14
+    print(fancy.getIndex(1))  # Output: 14
+    print(fancy.getIndex(2))  # Output: -1
