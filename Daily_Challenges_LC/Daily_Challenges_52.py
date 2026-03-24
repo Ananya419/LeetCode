@@ -20,9 +20,9 @@ class Solution:
 
         return p
 
-
 # Example Usage:
 if __name__ == "__main__":
     sol = Solution()
     grid = [[1, 2], [3, 4]]
     print(sol.constructProductMatrix(grid))  # Output: [[24, 12], [8, 6]]
+    
