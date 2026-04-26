@@ -43,4 +43,4 @@ class Solution:
 if __name__ == "__main__":
     sol = Solution()
     grid = [["a","b","b"],["b","z","b"],["b","b","a"]]
-    print(sol.containsCycle(grid))  # Output: True
+    print(sol.containsCycle(grid))  # Output: False
